@@ -1,0 +1,7 @@
+{
+    "require": {
+        "php": "~7",
+        "bramus/router": "~1.4",
+        "ext-mysqli": "*"
+    }
+}
