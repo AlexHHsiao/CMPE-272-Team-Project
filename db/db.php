@@ -23,11 +23,14 @@ if ($conn->connect_error) {
 //);";
 //$conn->query($query) or die($conn->error);
 
-$query = "INSERT INTO Persons (Email, Password, Username)
-            VALUES ('123', '11', '11');";
-if (!$conn->query($query)) {
-    echo("Error description: " . $conn -> error);
-}
+//$query = "INSERT INTO Persons (Email, Password, Username)
+//            VALUES ('123', '11', '11');";
+// $query = "SELECT * FROM Persons WHERE Email='Doe'";
+
+//if (!$conn->query($query)) {
+//    echo("Error description: " . $conn -> error);
+//    echo "<script>alert('sfsf');</script>";
+//}
 
 //$conn->query($query) or die($conn->error);
 

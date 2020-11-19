@@ -49,9 +49,19 @@ registerForm();
 function registerForm()
 {
     if (isset($_POST["register"])) {
-        echo $_POST['username'];
-        echo $_POST['email'];
-        echo $_POST['password'];
+        $conn = $GLOBALS['conn'];
+        $username = $_POST['username'];
+        $email = $_POST['email'];
+        $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+
+        $query = "INSERT INTO Persons (Email, Password, Username)
+            VALUES ('$email', '$password', '$username');";
+
+        if ($conn->query($query)) {
+            $_SESSION["user"] = $username;
+        } else {
+            echo "<script>alert('$conn -> error');</script>";
+        }
     }
 }
 
