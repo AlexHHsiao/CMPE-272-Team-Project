@@ -48,7 +48,7 @@ $router->all('/visited', function () {
 
 });
 
-$router->get('/product/(\w+)', function ($name) {
+$router->all('/product/(\w+)', function ($name) {
     if (isset($_SESSION['user'])) {
         $temArr = $_SESSION['user']['visited'];
         $userId = $_SESSION['user']['userId'];

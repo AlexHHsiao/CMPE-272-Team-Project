@@ -15,11 +15,31 @@
     <div class="card">
         <img class="card-img-top" src="../img/burger.jpg" alt="Burger">
         <div class="card-body">
-            <h5 class="card-title"><?php $GLOBALS['selectedProduct']?></h5>
+            <h5 class="card-title"><?php $GLOBALS['selectedProduct'] ?></h5>
             <p class="card-text">
                 This is our great product!
             </p>
             <a href="/" class="btn btn-primary">Go Back</a>
+
+            <form method="POST" action="" onsubmit="return validate(this)">
+                <div class="form-group">
+                    <label>Rate this product</label>
+                    <select class="form-control" name="rate">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Comment</label>
+                    <textarea class="form-control" rows="3" name="comment"></textarea>
+                </div>
+                <button type="submit" name='productRate' class="btn btn-primary">Submit</button>
+            </form>
+
+            placeholder for comment
         </div>
         <div class="card-footer">
             <small class="text-muted">9/30/2020</small>
@@ -27,4 +47,29 @@
     </div>
 </div>
 
+<script>
+    function validate(form) {
+        const {rate, comment} = form;
+        console.log(rate.value, comment.value)
+        if (rate.value.trim().length > 0 && comment.value.trim().length > 0) {
+            return true;
+        } else {
+            alert('Please enter required fields');
+            return false;
+        }
+    }
+</script>
 
+<?php
+
+productForm();
+
+function productForm()
+{
+    if (isset($_POST["productRate"])) {
+        $conn = $GLOBALS['conn'];
+        echo "dfas";
+    }
+}
+
+?>
