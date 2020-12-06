@@ -2,6 +2,21 @@
 // Include the Router class
 require __DIR__ . '/vendor/autoload.php';
 require_once './db/db.php';
+session_start();
+
+$GLOBALS['productData'] = array(
+    "product 1",
+    "product 2",
+    "product 3",
+    "product 4",
+    "product 5",
+    "product 6",
+    "product 7",
+    "product 8",
+    "product 9",
+    "product 10",
+);
+
 // Create a Router
 $router = new \Bramus\Router\Router();
 
@@ -17,40 +32,47 @@ $router->before('GET', '/.*', function () {
 });
 
 $router->all('/', function () {
-    require_once  './views/home.php';
+    require_once './views/home.php';
 });
 
-$router->all('/about', function () {
-    require_once  './views/about.php';
+$router->all('/topFive', function () {
+    require_once './views/top-five.php';
 });
 
-$router->all('/news', function () {
-    require_once  './views/news.php';
+$router->all('/visited', function () {
+    if (isset($_SESSION['user'])) {
+        require_once './views/visited.php';
+    } else {
+        header('Location: /');
+    }
+
 });
 
-$router->all('/product', function () {
-    require_once  './views/product.php';
-});
+$router->get('/product/(\w+)', function ($name) {
+    if (isset($_SESSION['user'])) {
+        $temArr = $_SESSION['user']['visited'];
+        $userId = $_SESSION['user']['userId'];
+        $temSession = $_SESSION['user'];
 
-$router->get('/product/(\w+)', function($name) {
-    $GLOBALS['selectedProduct'] = htmlentities($name);
-    require_once  './views/product-detail.php';
-});
+        if (array_key_exists($name, $temArr)) {
+            unset($temArr[$name]);
+        }
 
-$router->all('/user', function () {
-    require_once  './views/user.php';
-});
+        $temArr = array($name => array('id' => $name, 'name' => $GLOBALS['productData'][$name])) + $temArr;
+        $temSession['visited'] = $temArr;
+        $_SESSION['user'] = $temSession;
+        $GLOBALS['selectedProduct'] = $GLOBALS['productData'][$name];
 
-$router->all('/contact', function () {
-    require_once  './views/contact.php';
-});
+        $sqlValue = serialize($temArr);
+        $conn = $GLOBALS['conn'];
 
-$router->get('/getUser', function () {
-    $ch = curl_init();
-    curl_setopt($ch, CURLOPT_URL, "https://cmpe-php.herokuapp.com/API/index.php");
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    echo curl_exec($ch);
-    curl_close($ch);
+        $query = "UPDATE Persons SET Visited='$sqlValue' WHERE Id='$userId'";
+        $conn->query($query);
+
+        require_once './views/product-detail.php';
+    } else {
+        header('Location: /');
+    }
 });
 
 $router->run();

@@ -49,7 +49,7 @@ function loginForm()
         $email = $_POST['email'];
         $password = $_POST['password'];
 
-        $query = "SELECT Password, Username FROM Persons WHERE Email='$email'";
+        $query = "SELECT Password, Username, Id, Visited FROM Persons WHERE Email='$email'";
         $result =  $conn->query($query);
 
         if (mysqli_num_rows($result) == 0) {
@@ -57,7 +57,11 @@ function loginForm()
         } else {
             while ($row = $result->fetch_assoc()) {
                 if (password_verify($password, $row['Password'])) {
-                    $_SESSION["user"] = $row['Username'];
+                    $userData = array();
+                    $userData['userId'] = $row['Id'];
+                    $userData['username'] = $row['Username'];
+                    $userData['visited'] = unserialize($row['Visited']);
+                    $_SESSION["user"] = $userData;
                 } else {
                     echo "<script>alert('Wrong Password');</script>";
                 }

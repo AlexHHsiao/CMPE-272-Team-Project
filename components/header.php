@@ -1,5 +1,4 @@
 <?php
-session_start();
 require_once './components/loginModal.php';
 require_once './components/registerModal.php';
 
@@ -9,6 +8,7 @@ function logoutHandler()
 {
     if (isset($_POST["logout"])) {
         unset($_SESSION['user']);
+        header('Location: /');
     }
 }
 
@@ -20,7 +20,7 @@ function loginUIHandler()
                  <button class="btn btn-outline-success my-2 my-sm-0" data-toggle="modal" data-target="#loginModal">Login
                  </button>';
     } else {
-        echo 'Welcome ', $_SESSION['user'], '<form style="margin: 0" action="" method="POST"><button type="submit" name="logout" class="btn btn-primary ml-2">Logout</button></form>';
+        echo 'Welcome ', $_SESSION['user']['username'], '<form style="margin: 0" action="" method="POST"><button type="submit" name="logout" class="btn btn-primary ml-2">Logout</button></form>';
     }
 }
 
@@ -32,85 +32,46 @@ function navTabHandler()
             </li>
 _END;
 
-    $aboutTab = <<<_END
+    $topFiveTab = <<<_END
   <li class="nav-item">
-                <a class="nav-link" href="/about">About</a>
+                <a class="nav-link" href="/topFive">Top Five</a>
             </li>
 _END;
 
-    $newsTab = <<<_END
+    $visitedTab = <<<_END
   <li class="nav-item">
-                <a class="nav-link" href="/news">News</a>
-            </li>
-_END;
-
-    $productTab = <<<_END
-  <li class="nav-item">
-                <a class="nav-link" href="/product">Product</a>
-            </li>
-_END;
-
-    $contactTab = <<<_END
-  <li class="nav-item">
-                <a class="nav-link" href="/contact">Contact</a>
-            </li>
-_END;
-    $userTab = <<<_END
-  <li class="nav-item">
-                <a class="nav-link" href="/user">User</a>
+                <a class="nav-link" href="/visited">Visited</a>
             </li>
 _END;
 
     switch ($GLOBALS['currentPage']) {
-        case 'about':
-            $aboutTab = <<<_END
+        case 'topFive':
+            $topFiveTab = <<<_END
 <li class="nav-item active">
-  <a class="nav-link" href="/about">About <span class="sr-only">(current)</span></a>
+  <a class="nav-link" href="/topFive">Top Five<span class="sr-only">(current)</span></a>
 </li>
 _END;
             break;
-        case 'news':
-            $newsTab = <<<_END
+        case 'visited':
+            $visitedTab = <<<_END
 <li class="nav-item active">
-  <a class="nav-link" href="/news">News <span class="sr-only">(current)</span></a>
-</li>
-_END;
-            break;
-        case 'product':
-            $productTab = <<<_END
-<li class="nav-item active">
-  <a class="nav-link" href="/product">Product <span class="sr-only">(current)</span></a>
-</li>
-_END;
-            break;
-        case 'contact':
-            $contactTab = <<<_END
-<li class="nav-item active">
-  <a class="nav-link" href="/contact">Contact <span class="sr-only">(current)</span></a>
-</li>
-_END;
-            break;
-        case 'user':
-            $userTab = <<<_END
-<li class="nav-item active">
-  <a class="nav-link" href="/user">User <span class="sr-only">(current)</span></a>
+  <a class="nav-link" href="/visited">Visited<span class="sr-only">(current)</span></a>
 </li>
 _END;
             break;
         default:
             $homeTab = <<<_END
 <li class="nav-item active">
-  <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+  <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
 </li>
 _END;
     }
 
-    echo $homeTab, $aboutTab, $newsTab, $productTab, $userTab, $contactTab;
+    echo $homeTab, $topFiveTab, $visitedTab;
 }
 
 ?>
 
-<!DOCTYPE html>
 <header>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
             integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -128,7 +89,7 @@ _END;
 <html>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="/">Day Dream</a>
+    <a class="navbar-brand" href="/">Market Place</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -147,7 +108,3 @@ _END;
 </body>
 </html>
 
-<?php
-
-
-?>

@@ -18,7 +18,9 @@ if ($conn->connect_error) {
 //$query = "CREATE TABLE Persons (
 //    Email varchar(255),
 //    Password varchar(255),
+//    Id varchar(255),
 //    Username varchar(255),
+//    Visited varchar(255),
 //    UNIQUE (Email)
 //);";
 //$conn->query($query) or die($conn->error);

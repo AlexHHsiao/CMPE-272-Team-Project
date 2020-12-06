@@ -52,13 +52,19 @@ function registerForm()
         $conn = $GLOBALS['conn'];
         $username = $_POST['username'];
         $email = $_POST['email'];
+        $visited = serialize(array());
         $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+        $id = uniqid("user");
 
-        $query = "INSERT INTO Persons (Email, Password, Username)
-            VALUES ('$email', '$password', '$username');";
+        $query = "INSERT INTO Persons (Email, Password, Username, Id, Visited)
+            VALUES ('$email', '$password', '$username', '$id', '$visited');";
 
         if ($conn->query($query)) {
-            $_SESSION["user"] = $username;
+            $userData = array();
+            $userData['userId'] = $id;
+            $userData['username'] = $username;
+            $userData['visited'] = $visited;
+            $_SESSION["user"] = $userData;
         } else {
             echo "<script>alert('$conn -> error');</script>";
         }
