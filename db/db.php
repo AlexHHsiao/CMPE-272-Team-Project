@@ -20,8 +20,17 @@ if ($conn->connect_error) {
 //    Password varchar(255),
 //    Id varchar(255),
 //    Username varchar(255),
-//    Visited varchar(255),
+//    Visited longtext,
 //    UNIQUE (Email)
+//);";
+//$conn->query($query) or die($conn->error);
+
+//$query = "CREATE TABLE Reviews (
+//    UserId varchar(255),
+//    Rate varchar(255),
+//    Id varchar(255),
+//    Username varchar(255),
+//    Comment varchar(255),
 //);";
 //$conn->query($query) or die($conn->error);
 

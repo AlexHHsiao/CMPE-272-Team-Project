@@ -1,3 +1,37 @@
+<?php
+$reviewArray = array();
+
+reviewForm();
+
+function reviewForm()
+{
+    if (isset($_POST["review"])) {
+        global $reviewArray;
+        $conn = $GLOBALS['conn'];
+        $username = $_SESSION['user']['username'];
+        $userId = $_SESSION['user']['userId'];
+        $rate = $_POST['rate'];
+        $comment = $_POST['comment'];
+        $id = $GLOBALS['selectedProduct'];
+
+        $query = "INSERT INTO Reviews (UserId, UserName, Rate, Id, Comment)
+            VALUES ('$userId', '$username', '$rate', '$id', '$comment');";
+
+        if ($conn->query($query)) {
+            $review = array(
+                'username' => $username,
+                'rate' => $rate,
+                'comment' => $comment
+            );
+            $reviewArray[] = $review;
+        } else {
+            echo "<script>alert('$conn -> error');</script>";
+        }
+    }
+}
+
+?>
+
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <style>
@@ -15,7 +49,7 @@
     <div class="card">
         <img class="card-img-top" src="../img/burger.jpg" alt="Burger">
         <div class="card-body">
-            <h5 class="card-title"><?php $GLOBALS['selectedProduct'] ?></h5>
+            <h5 class="card-title"><?php echo $GLOBALS['productData'][$GLOBALS['selectedProduct']] ?></h5>
             <p class="card-text">
                 This is our great product!
             </p>
@@ -36,10 +70,14 @@
                     <label>Comment</label>
                     <textarea class="form-control" rows="3" name="comment"></textarea>
                 </div>
-                <button type="submit" name='productRate' class="btn btn-primary">Submit</button>
+                <button type="submit" name='review' class="btn btn-primary">Submit</button>
             </form>
 
-            placeholder for comment
+            <?php
+            echo "<pre>";
+            print_r($reviewArray);
+            echo "</pre>";
+            ?>
         </div>
         <div class="card-footer">
             <small class="text-muted">9/30/2020</small>
@@ -60,16 +98,3 @@
     }
 </script>
 
-<?php
-
-productForm();
-
-function productForm()
-{
-    if (isset($_POST["productRate"])) {
-        $conn = $GLOBALS['conn'];
-        echo "dfas";
-    }
-}
-
-?>

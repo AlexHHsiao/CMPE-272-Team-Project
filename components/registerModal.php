@@ -63,7 +63,7 @@ function registerForm()
             $userData = array();
             $userData['userId'] = $id;
             $userData['username'] = $username;
-            $userData['visited'] = $visited;
+            $userData['visited'] = array();
             $_SESSION["user"] = $userData;
         } else {
             echo "<script>alert('$conn -> error');</script>";

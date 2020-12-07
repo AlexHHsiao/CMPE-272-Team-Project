@@ -61,7 +61,7 @@ $router->all('/product/(\w+)', function ($name) {
         $temArr = array($name => array('id' => $name, 'name' => $GLOBALS['productData'][$name])) + $temArr;
         $temSession['visited'] = $temArr;
         $_SESSION['user'] = $temSession;
-        $GLOBALS['selectedProduct'] = $GLOBALS['productData'][$name];
+        $GLOBALS['selectedProduct'] = $name;
 
         $sqlValue = serialize($temArr);
         $conn = $GLOBALS['conn'];
