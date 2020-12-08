@@ -32,6 +32,8 @@ require_once './components/header.php';
     </div>
 </div>
 
+<!-- Jingjing -->
+
 <div class="card-container">
     <div class="card">
         <h5 class="card-header">Day Dream Products</h5>
@@ -52,6 +54,8 @@ require_once './components/header.php';
     </div>
 </div>
 
+<!-- YOHO -->
+
 <div class="card-container">
     <div class="card">
         <h5 class="card-header">Day Dream Products</h5>
@@ -71,6 +75,8 @@ require_once './components/header.php';
         </div>
     </div>
 </div>
+
+<!-- Yizhou -->
 
 <div class="card-container">
     <div class="card">

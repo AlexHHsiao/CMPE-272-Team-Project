@@ -1,5 +1,8 @@
 <?php
 $reviewArray = array();
+// 1. fetch comments from db based on id  $GLOBALS['selectedProduct']
+// 2. display all comment (including UI)
+// 3. update comment when user submit new comment
 
 reviewForm();
 
@@ -18,6 +21,7 @@ function reviewForm()
             VALUES ('$userId', '$username', '$rate', '$id', '$comment');";
 
         if ($conn->query($query)) {
+            // update local comment
             $review = array(
                 'username' => $username,
                 'rate' => $rate,
@@ -73,11 +77,7 @@ function reviewForm()
                 <button type="submit" name='review' class="btn btn-primary">Submit</button>
             </form>
 
-            <?php
-            echo "<pre>";
-            print_r($reviewArray);
-            echo "</pre>";
-            ?>
+            display comment here
         </div>
         <div class="card-footer">
             <small class="text-muted">9/30/2020</small>
