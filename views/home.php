@@ -41,16 +41,16 @@ require_once './components/header.php';
         </h5>
         <div class="card-body">
             <div class="list-group">
-                <a href="/product/product10" class="list-group-item list-group-item-action">Product 10</a>
-                <a href="/product/product11" class="list-group-item list-group-item-action">Product 11</a>
-                <a href="/product/product12" class="list-group-item list-group-item-action">Product 12</a>
-                <a href="/product/product13" class="list-group-item list-group-item-action">Product 13</a>
-                <a href="/product/product14" class="list-group-item list-group-item-action">Product 14</a>
-                <a href="/product/product15" class="list-group-item list-group-item-action">Product 15</a>
-                <a href="/product/product16" class="list-group-item list-group-item-action">Product 16</a>
-                <a href="/product/product17" class="list-group-item list-group-item-action">Product 17</a>
-                <a href="/product/product18" class="list-group-item list-group-item-action">Product 18</a>
-                <a href="/product/product19" class="list-group-item list-group-item-action">Product 19</a>
+                <a href="/product/essence_oil.php" class="list-group-item list-group-item-action">Product 10</a>
+                <a href="/product/eyecream_I.php" class="list-group-item list-group-item-action">Product 11</a>
+                <a href="/product/eyecream_II.php" class="list-group-item list-group-item-action">Product 12</a>
+                <a href="/product/facecream_I.php" class="list-group-item list-group-item-action">Product 13</a>
+                <a href="/product/facecream_II.php" class="list-group-item list-group-item-action">Product 14</a>
+                <a href="/product/facecream_III.php" class="list-group-item list-group-item-action">Product 15</a>
+                <a href="/product/serum_I.php" class="list-group-item list-group-item-action">Product 16</a>
+                <a href="/product/serum_II.php" class="list-group-item list-group-item-action">Product 17</a>
+                <a href="/product/suncream_I.php" class="list-group-item list-group-item-action">Product 18</a>
+                <a href="/product/suncream_II.php" class="list-group-item list-group-item-action">Product 19</a>
             </div>
         </div>
     </div>
