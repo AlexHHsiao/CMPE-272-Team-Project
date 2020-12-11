@@ -25,14 +25,14 @@ if ($conn->connect_error) {
 //);";
 //$conn->query($query) or die($conn->error);
 
-//$query = "CREATE TABLE Reviews (
+// $query = "CREATE TABLE Reviews (
 //    UserId varchar(255),
 //    Rate varchar(255),
 //    Id varchar(255),
 //    Username varchar(255),
-//    Comment varchar(255),
-//);";
-//$conn->query($query) or die($conn->error);
+//    Comment varchar(255)
+// );";
+// $conn->query($query) or die($conn->error);
 
 //$query = "INSERT INTO Persons (Email, Password, Username)
 //            VALUES ('123', '11', '11');";

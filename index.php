@@ -5,6 +5,7 @@ require_once './db/db.php';
 session_start();
 
 $GLOBALS['productData'] = array(
+    "product 0",
     "product 1",
     "product 2",
     "product 3",
@@ -15,6 +16,15 @@ $GLOBALS['productData'] = array(
     "product 8",
     "product 9",
     "product 10",
+    "product 11",
+    "product 12",
+    "product 13",
+    "product 14",
+    "product 15",
+    "product 16",
+    "product 17",
+    "product 18",
+    "product 19",
 );
 
 // Create a Router
