@@ -37,20 +37,20 @@ require_once './components/header.php';
 <div class="card-container">
     <div class="card">
     <h5 class="card-header">
-            <a href="http://34.227.171.105" target="_blank">Life Creative Products</a>
+            <a href="http://34.227.171.105/" target="_blank">Life Creative Products</a>
         </h5>
         <div class="card-body">
             <div class="list-group">
-                <a href="/product/essence_oil.php" class="list-group-item list-group-item-action">Product 10</a>
-                <a href="/product/eyecream_I.php" class="list-group-item list-group-item-action">Product 11</a>
-                <a href="/product/eyecream_II.php" class="list-group-item list-group-item-action">Product 12</a>
-                <a href="/product/facecream_I.php" class="list-group-item list-group-item-action">Product 13</a>
-                <a href="/product/facecream_II.php" class="list-group-item list-group-item-action">Product 14</a>
-                <a href="/product/facecream_III.php" class="list-group-item list-group-item-action">Product 15</a>
-                <a href="/product/serum_I.php" class="list-group-item list-group-item-action">Product 16</a>
-                <a href="/product/serum_II.php" class="list-group-item list-group-item-action">Product 17</a>
-                <a href="/product/suncream_I.php" class="list-group-item list-group-item-action">Product 18</a>
-                <a href="/product/suncream_II.php" class="list-group-item list-group-item-action">Product 19</a>
+                <a href="/product/10" class="list-group-item list-group-item-action">Product 10</a>
+                <a href="/product/11" class="list-group-item list-group-item-action">Product 11</a>
+                <a href="/product/12" class="list-group-item list-group-item-action">Product 12</a>
+                <a href="/product/13" class="list-group-item list-group-item-action">Product 13</a>
+                <a href="/product/14" class="list-group-item list-group-item-action">Product 14</a>
+                <a href="/product/15" class="list-group-item list-group-item-action">Product 15</a>
+                <a href="/product/16" class="list-group-item list-group-item-action">Product 16</a>
+                <a href="/product/17" class="list-group-item list-group-item-action">Product 17</a>
+                <a href="/product/18" class="list-group-item list-group-item-action">Product 18</a>
+                <a href="/product/19" class="list-group-item list-group-item-action">Product 19</a>
             </div>
         </div>
     </div>

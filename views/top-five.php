@@ -17,11 +17,11 @@ require_once './components/header.php';
         <div class="card-body">
             <div class="list-group">
                 <a href="/product/id" class="list-group-item list-group-item-action">Product Name</a>
-                <a href="/product/product2" class="list-group-item list-group-item-action">Product 2</a>
-                <a href="/product/product3" class="list-group-item list-group-item-action">Product 3</a>
-                <a href="/product/product4" class="list-group-item list-group-item-action">Product 4</a>
-                <a href="/product/product5" class="list-group-item list-group-item-action">Product 5</a>
-                <a href="/product/product5" class="list-group-item list-group-item-action">Product 5</a>
+                <a href="/product/product2" class="list-group-item list-group-item-action">Product 1</a>
+                <a href="/product/product3" class="list-group-item list-group-item-action">Product 12</a>
+                <a href="/product/product4" class="list-group-item list-group-item-action">Product 23</a>
+                <a href="/product/product5" class="list-group-item list-group-item-action">Product 36</a>
+                <a href="/product/product5" class="list-group-item list-group-item-action">Product 15</a>
             </div>
         </div>
     </div>

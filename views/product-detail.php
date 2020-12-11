@@ -47,11 +47,12 @@ function reviewForm()
         height: 200px;
         object-fit: cover;
     }
+
 </style>
 
 <div class="card-container">
     <div class="card">
-        <img class="card-img-top" src="../img/burger.jpg" alt="Burger">
+        <img class="card-img-top" src="../img/background.jpg" alt="Burger">
         <div class="card-body">
             <h5 class="card-title"><?php echo $GLOBALS['productData'][$GLOBALS['selectedProduct']] ?></h5>
             <p class="card-text">
