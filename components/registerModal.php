@@ -66,7 +66,7 @@ function registerForm()
             $userData['visited'] = array();
             $_SESSION["user"] = $userData;
         } else {
-            //echo "<script>alert('$conn -> error');</script>";
+            echo "<script>alert('$conn -> error');</script>";
         }
     }
 }

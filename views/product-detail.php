@@ -1,6 +1,4 @@
 <?php
-$reviewArray = array();
-
 // 3. update comment when user submit new comment
 
 reviewForm();
@@ -26,7 +24,6 @@ function reviewForm()
                 'rate' => $rate,
                 'comment' => $comment
             );
-            $reviewArray[] = $review;
         } else {
             echo "<script>alert('$conn -> error');</script>";
         }
@@ -39,18 +36,26 @@ function readComments()
     $id = $GLOBALS['selectedProduct'];
     $conn = $GLOBALS['conn'];
     $sql = "SELECT Comment, Username, Rate FROM reviews WHERE Id = $id";
-    $result = $conn->query($sql);  
-    
+    $result = $conn->query($sql);
+
     if ($result->num_rows > 0) {
         // output data of each row
-        while($row = $result->fetch_assoc()) {
-        echo "<br>";
-        echo "User: ". $row["Username"]. "<br>";
-        echo "Rate: ". $row["Rate"]. "<br>";
-        echo "Comments: ". $row["Comment"]. "<br>";
-    }
-    } else {
-        echo "No Comments";
+        while ($row = $result->fetch_assoc()) {
+            $username = $row["Username"];
+            $rate = $row["Rate"];
+            $comment = $row["Comment"];
+
+
+            echo <<<_END
+                <div class="list-group-item list-group-item-action flex-column align-items-start">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">Rate: $rate</h5>
+                    </div>
+                    <p class="mb-1">$comment</p>
+                    <small>By: $username</small>
+                </div>
+_END;
+        }
     }
 }
 
@@ -98,13 +103,11 @@ function readComments()
                 </div>
                 <button type="submit" name='review' class="btn btn-primary">Submit</button>
             </form>
-            <div class="form-group">
-                    <label><b>Comments:</b></label>
-                
-            <?php
+
+            <div class="list-group">
+                <?php
                 readComments();
                 ?>
-
             </div>
         </div>
         <div class="card-footer">
