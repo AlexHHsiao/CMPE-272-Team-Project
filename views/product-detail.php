@@ -1,7 +1,6 @@
 <?php
 $reviewArray = array();
-// 1. fetch comments from db based on id  $GLOBALS['selectedProduct']
-// 2. display all comment (including UI)
+
 // 3. update comment when user submit new comment
 
 reviewForm();
@@ -33,6 +32,28 @@ function reviewForm()
         }
     }
 }
+
+// Fetch comments from db based on id $GLOBALS['selectedProduct']
+function readComments()
+{
+    $id = $GLOBALS['selectedProduct'];
+    $conn = $GLOBALS['conn'];
+    $sql = "SELECT Comment, Username, Rate FROM reviews WHERE Id = $id";
+    $result = $conn->query($sql);  
+    
+    if ($result->num_rows > 0) {
+        // output data of each row
+        while($row = $result->fetch_assoc()) {
+        echo "<br>";
+        echo "User: ". $row["Username"]. "<br>";
+        echo "Rate: ". $row["Rate"]. "<br>";
+        echo "Comments: ". $row["Comment"]. "<br>";
+    }
+    } else {
+        echo "No Comments";
+    }
+}
+
 
 ?>
 
@@ -77,8 +98,14 @@ function reviewForm()
                 </div>
                 <button type="submit" name='review' class="btn btn-primary">Submit</button>
             </form>
+            <div class="form-group">
+                    <label><b>Comments:</b></label>
+                
+            <?php
+                readComments();
+                ?>
 
-            display comment here
+            </div>
         </div>
         <div class="card-footer">
             <small class="text-muted">9/30/2020</small>
