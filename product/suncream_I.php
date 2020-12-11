@@ -21,7 +21,7 @@ setcookie("Product9", "Life Creative suncream I", time() + 3600 * 24 * 31, "/","
 <h1>Life Creative suncream I</h1>
 
  
-<p><img src="img/suncream_I.jpg"/></p>
+<p><img src="../img/suncream_I.jpg"/></p>
 <p>Life Creatvie suncream I is designed for ages dry skin. Apply it everytime before sun explosure. Apply it every 4 hours.</p> 
 
 

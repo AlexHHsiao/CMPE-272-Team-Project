@@ -21,7 +21,7 @@ if($length >= 5)
 <h1>Life Creative eyecream I</h1>
 
  
-<p><img src="img/eyecream_I.jpg"/></p>
+<p><img src="../img/eyecream_I.jpg"/></p>
 <p>Life Creatvie eyecream contains Growing Factor(GF), for ages under 25. Apply it during mornings and evenings.</p> 
 
 

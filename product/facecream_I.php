@@ -23,7 +23,7 @@ setcookie("Product2", "Life Creative face cream I", time() + 3600 * 24 * 31, "/"
 <h1>Life Creative face cream I</h1>
 
  
-<p><img src="img/facecream_I.jpg"/></p>
+<p><img src="../img/facecream_I.jpg"/></p>
 <p>Life Creatvie face cream is one of our bestsellers, for ages under 25. </p> 
 
 

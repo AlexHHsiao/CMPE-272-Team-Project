@@ -20,7 +20,7 @@ setcookie("Product4", "Life Creative face cream III", time() + 3600 * 24 * 31, "
 <h1>Life Creative face cream III</h1>
 
  
-<p><img src="img/facecream_III.jpg"/></p>
+<p><img src="../img/facecream_III.jpg"/></p>
 <p>Life Creatvie face cream is one of our bestsellers, for ages above 25. Apply it during evenings.</p> 
 
 

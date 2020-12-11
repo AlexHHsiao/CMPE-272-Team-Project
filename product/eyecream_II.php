@@ -23,7 +23,7 @@ setcookie("Product6", "Life Creative Eyecream II", time() + 3600 * 24 * 31, "/",
 
 
  
-<p><img src="img/eyecream_II.jpg"/></p>
+<p><img src="../img/eyecream_II.jpg"/></p>
 <p>Life Creatvie eyecream contains Growing Factor(GF), for ages above 25. Apply it during mornings and evenings.</p> 
 
 

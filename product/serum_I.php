@@ -22,7 +22,7 @@ setcookie("Product7", "Life Creatvie serum I", time() + 3600 * 24 * 31, "/","", 
 <h1>Life Creative serum I</h1>
 
  
-<p><img src="img/serum_I.jpg"/></p>
+<p><img src="../img/serum_I.jpg"/></p>
 <p>Life Creatvie serum I contains Growing Factor(GF), for ages under 25. Apply it during mornings and evenings.</p> 
 
 
