@@ -63,16 +63,16 @@ require_once './components/header.php';
         <h5 class="card-header"><a href="http://yohoc.xyz/" target="_blank">Teach-Me-Piano Products</a></h5>
         <div class="card-body">
             <div class="list-group">
-                <a href="/product/product20" class="list-group-item list-group-item-action">Product 20</a>
-                <a href="/product/product21" class="list-group-item list-group-item-action">Product 21</a>
-                <a href="/product/product22" class="list-group-item list-group-item-action">Product 22</a>
-                <a href="/product/product23" class="list-group-item list-group-item-action">Product 23</a>
-                <a href="/product/product24" class="list-group-item list-group-item-action">Product 24</a>
-                <a href="/product/product25" class="list-group-item list-group-item-action">Product 25</a>
-                <a href="/product/product26" class="list-group-item list-group-item-action">Product 26</a>
-                <a href="/product/product27" class="list-group-item list-group-item-action">Product 27</a>
-                <a href="/product/product28" class="list-group-item list-group-item-action">Product 28</a>
-                <a href="/product/product29" class="list-group-item list-group-item-action">Product 29</a>
+                <a href="/product/20" class="list-group-item list-group-item-action">Product 20</a>
+                <a href="/product/21" class="list-group-item list-group-item-action">Product 21</a>
+                <a href="/product/22" class="list-group-item list-group-item-action">Product 22</a>
+                <a href="/product/23" class="list-group-item list-group-item-action">Product 23</a>
+                <a href="/product/24" class="list-group-item list-group-item-action">Product 24</a>
+                <a href="/product/25" class="list-group-item list-group-item-action">Product 25</a>
+                <a href="/product/26" class="list-group-item list-group-item-action">Product 26</a>
+                <a href="/product/27" class="list-group-item list-group-item-action">Product 27</a>
+                <a href="/product/28" class="list-group-item list-group-item-action">Product 28</a>
+                <a href="/product/29" class="list-group-item list-group-item-action">Product 29</a>
             </div>
         </div>
     </div>
@@ -85,16 +85,16 @@ require_once './components/header.php';
         <h5 class="card-header">Day Dream Products</h5>
         <div class="card-body">
             <div class="list-group">
-                <a href="/product/product30" class="list-group-item list-group-item-action">Product 30</a>
-                <a href="/product/product31" class="list-group-item list-group-item-action">Product 31</a>
-                <a href="/product/product32" class="list-group-item list-group-item-action">Product 32</a>
-                <a href="/product/product33" class="list-group-item list-group-item-action">Product 33</a>
-                <a href="/product/product34" class="list-group-item list-group-item-action">Product 34</a>
-                <a href="/product/product35" class="list-group-item list-group-item-action">Product 35</a>
-                <a href="/product/product36" class="list-group-item list-group-item-action">Product 36</a>
-                <a href="/product/product37" class="list-group-item list-group-item-action">Product 37</a>
-                <a href="/product/product38" class="list-group-item list-group-item-action">Product 38</a>
-                <a href="/product/product39" class="list-group-item list-group-item-action">Product 39</a>
+                <a href="/product/30" class="list-group-item list-group-item-action">Product 30</a>
+                <a href="/product/31" class="list-group-item list-group-item-action">Product 31</a>
+                <a href="/product/32" class="list-group-item list-group-item-action">Product 32</a>
+                <a href="/product/33" class="list-group-item list-group-item-action">Product 33</a>
+                <a href="/product/34" class="list-group-item list-group-item-action">Product 34</a>
+                <a href="/product/35" class="list-group-item list-group-item-action">Product 35</a>
+                <a href="/product/36" class="list-group-item list-group-item-action">Product 36</a>
+                <a href="/product/37" class="list-group-item list-group-item-action">Product 37</a>
+                <a href="/product/38" class="list-group-item list-group-item-action">Product 38</a>
+                <a href="/product/39" class="list-group-item list-group-item-action">Product 39</a>
             </div>
         </div>
     </div>
