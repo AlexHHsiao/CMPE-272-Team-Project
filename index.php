@@ -25,6 +25,16 @@ $GLOBALS['productData'] = array(
     "product 17",
     "product 18",
     "product 19",
+	"product 30",
+    "product 31",
+    "product 32",
+    "product 33",
+    "product 34",
+    "product 35",
+    "product 36",
+    "product 37",
+    "product 38",
+    "product 39"
 );
 
 // Create a Router
