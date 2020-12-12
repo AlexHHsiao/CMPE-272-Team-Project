@@ -1,6 +1,4 @@
 <?php
-// 3. update comment when user submit new comment
-
 reviewForm();
 
 function reviewForm()

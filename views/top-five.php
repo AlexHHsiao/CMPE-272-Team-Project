@@ -1,8 +1,6 @@
 <?php
 $GLOBALS['currentPage'] = 'topFive';
 require_once './components/header.php';
-
-// display top five whatever
 ?>
 
 <style>
@@ -34,7 +32,6 @@ require_once './components/header.php';
 
 function getTop5()
 {
-    $id = $GLOBALS['selectedProduct'];
     $conn = $GLOBALS['conn'];
     $sql = "SELECT * FROM (SELECT Id, SUM(Rate) AS totalRate FROM Reviews GROUP BY Id) AS RESULT ORDER BY totalRate DESC LIMIT 5";
     $result = $conn->query($sql);

@@ -36,7 +36,7 @@ require_once './components/header.php';
 
 <div class="card-container">
     <div class="card">
-    <h5 class="card-header">
+        <h5 class="card-header">
             <a href="http://18.206.228.53/" target="_blank">Life Creative Products</a>
         </h5>
         <div class="card-body">
@@ -82,7 +82,7 @@ require_once './components/header.php';
 
 <div class="card-container">
     <div class="card">
-        <h5 class="card-header">Day Dream Products</h5>
+        <h5 class="card-header"><a href="http://yyan.site/" target="_blank">The Yan's Company</a></h5>
         <div class="card-body">
             <div class="list-group">
                 <a href="/product/30" class="list-group-item list-group-item-action">Product 30</a>
