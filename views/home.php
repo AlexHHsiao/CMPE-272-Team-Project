@@ -37,7 +37,7 @@ require_once './components/header.php';
 <div class="card-container">
     <div class="card">
     <h5 class="card-header">
-            <a href="http://34.227.171.105/" target="_blank">Life Creative Products</a>
+            <a href="http://18.206.228.53/" target="_blank">Life Creative Products</a>
         </h5>
         <div class="card-body">
             <div class="list-group">
