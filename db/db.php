@@ -1,13 +1,13 @@
 <?php
-//$server = 'us-cdbr-east-02.cleardb.com';
-//$username = 'b29064eaa430d7';
-//$password = '10702318';
-//$db = 'heroku_b9123864f1692c6';
-
-$server = 'localhost';
-$username = 'root';
-$password = '';
+$server = 'us-cdbr-east-02.cleardb.com';
+$username = 'b29064eaa430d7';
+$password = '10702318';
 $db = 'heroku_b9123864f1692c6';
+
+//$server = 'localhost';
+//$username = 'root';
+//$password = '';
+//$db = 'heroku_b9123864f1692c6';
 
 $conn = new mysqli($server, $username, $password, $db);
 
@@ -24,7 +24,7 @@ if ($conn->connect_error) {
 //    UNIQUE (Email)
 //);";
 //$conn->query($query) or die($conn->error);
-
+//
 // $query = "CREATE TABLE Reviews (
 //    UserId varchar(255),
 //    Rate varchar(255),
@@ -33,19 +33,5 @@ if ($conn->connect_error) {
 //    Comment varchar(255)
 // );";
 // $conn->query($query) or die($conn->error);
-
-//$query = "INSERT INTO Persons (Email, Password, Username)
-//            VALUES ('123', '11', '11');";
-// $query = "SELECT * FROM Persons WHERE Email='Doe'";
-
-//if (!$conn->query($query)) {
-//    echo("Error description: " . $conn -> error);
-//    echo "<script>alert('sfsf');</script>";
-//}
-
-//$conn->query($query) or die($conn->error);
-
-// echo password_hash("123123", PASSWORD_DEFAULT);
-//echo password_verify('123123', '$2y$10$h1UnKdKgAl9eKffih0ALUOqKSQKkiNcgOgYCEHkmg3Sk/ZURSVJnG');
 
 $GLOBALS['conn'] = $conn;
